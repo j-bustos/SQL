@@ -56,8 +56,8 @@ SELECT name, popularity FROM marvels
 -- Categorize Marvel characters "speed"
 SELECT COUNT (*),
     CASE
-        WHEN speed >= 4 THEN "really_fast"
-        WHEN speed < 4 AND speed > 2 THEN "fast"
+        WHEN speed > 5 THEN "really_fast"
+        WHEN speed <= 4 AND speed >= 2 THEN "fast"
         ELSE "slow"
     END as "quickness" 
 FROM marvels 
