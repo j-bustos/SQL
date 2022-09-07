@@ -1,0 +1,28 @@
+--Create a grocery store database
+
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, name TEXT, color TEXT, brand TEXT, price REAL);
+
+INSERT INTO my_store VALUES (1, "shirt", "blue", "nike", 20);
+INSERT INTO my_store VALUES (2, "shirt", "black", "adidas", 15);
+INSERT INTO my_store VALUES (3, "shirt", "green", "puma", 10);
+INSERT INTO my_store VALUES (4, "shirt", "yellow", "gucci", 5); 
+INSERT INTO my_store VALUES (5, "shirt", "pink", "fendi", 30);
+INSERT INTO my_store VALUES (6, "pants", "black", "nike", 15);
+INSERT INTO my_store VALUES (7, "pants", "green", "adidas", 10);
+INSERT INTO my_store VALUES (8, "pants", "blue", "puma", 20);
+INSERT INTO my_store VALUES (9, "pants", "black", "gucci", 15);
+INSERT INTO my_store VALUES (10, "shorts", "green", "fendi", 10);
+INSERT INTO my_store VALUES (11, "shorts", "black", "prada", 15);
+INSERT INTO my_store VALUES (12, "shorts", "green", "versace", 10);
+INSERT INTO my_store VALUES (13, "shorts", "blue", "tommy", 20);
+INSERT INTO my_store VALUES (14, "shorts", "black", "polo", 15);
+INSERT INTO my_store VALUES (15, "shorts", "green", "champion", 10);
+
+--display the database ordered by price. 
+SELECT * FROM my_store ORDER BY price;
+
+--display the database ordered by id.
+SELECT * FROM my_store ORDER by id;
+
+--display all items that are the color blue 
+SELECT * FROM my_store WHERE color = "blue"
