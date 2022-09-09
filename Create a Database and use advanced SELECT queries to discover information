@@ -60,5 +60,4 @@ SELECT COUNT (*),
         WHEN speed <= 4 AND speed >= 2 THEN "fast"
         ELSE "slow"
     END as "quickness" 
-FROM marvels 
-GROUP BY "quickness";
+FROM marvels;
