@@ -1,0 +1,37 @@
+--Creat your own table with some small set of “famous people”, then make more tables 
+about things they do and join those to create nice human readable lists--
+
+CREATE TABLE famous_rappers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    birthplace TEXT);
+    
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Drake", 35, "Toronto");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Pharrell", 49, "Virginia Beach");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Master P", 52, "New Orleans");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Eminem", 49, "Saint Joseph");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Dr Dre", 57, "Compton");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Diddy", 52, "Harlem");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Jay Z", 52, "Brooklyn");
+INSERT INTO famous_rappers (fullname, age, birthplace) VALUES ("Kanye West", 45, "Atlanta");
+
+CREATE table wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    famous_id INTEGER,
+    net_worth TEXT,
+    career_start INTEGER);
+    
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (1, "180 million", "2009");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (2, "200 million", "2001");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (3, "201 million", "1991");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (4, "230 million", "1999");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (5, "500 million", "1991");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (6, "900 million", "1997");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (7, "1 billion", "1996");
+INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (8, "6 billion", "1996");
+
+-- Join both tables--
+SELECT fullname, age, net_worth, career_start FROM famous_rappers
+    JOIN wealth
+    ON famous_rappers.id = wealth.id;
