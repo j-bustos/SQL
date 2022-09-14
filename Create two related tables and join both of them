@@ -32,6 +32,7 @@ INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (7, "1 billion",
 INSERT INTO wealth (famous_id, net_worth, career_start ) VALUES (8, "6 billion", "1996");
 
 -- Join both tables--
-SELECT fullname, age, net_worth, career_start FROM famous_rappers
-    JOIN wealth
-    ON famous_rappers.id = wealth.id;
+SELECT fullname, age, birthplace, net_worth, career_start
+FROM famous_rappers
+JOIN wealth
+ON famous_rappers.id = wealth.id;
